@@ -10,17 +10,17 @@ var mouse = {
 	py: 0
 };
 var emoji1Sizes = {
-	cx: 75,
-	cy: -200,
+	cx: 255,
+	cy: 15,
 	leftEye: {
-		cx: 75 + 345,
+		cx: 75 + 385,
 		cy: -200 + 544
 	},
 	rightEye: {
-		cx: 75 + 496,
+		cx: 75 + 476,
 		cy: -200 + 544
 	},
-	eyeRadius: 40
+	eyeRadius: 20
 };
 var emoji1 = new Image();
 var debug = false;
@@ -48,10 +48,10 @@ $(document).ready(function() {
 		mouse.y = e.clientY - rect.top;
 		e.preventDefault();
 	};
-	emoji1.src = 'https://www.dropbox.com/s/cjjjx02e71kkfox/emoji1_body.svg?raw=1';
+	emoji1.src = 'http://svgshare.com/i/3v5.svg';
 	//emoji1.src = '/animations/followMouse/images/emoji1_body.svg';
-	emoji1.width = '50';
-	emoji1.height = '50';
+	emoji1.width = 200;
+	emoji1.height = 400;
 
 	emoji1.onload = function() {
 		ctx.drawImage(emoji1, emoji1Sizes.cx, emoji1Sizes.cy);
@@ -127,14 +127,11 @@ Eyes.prototype.drawGrid = function() {
 
 var Eye = function(cx, cy, radius) {
 	this.eyeImage = new Image();
-	this.eyeImage.src = 'https://www.dropbox.com/s/szqsuxwql8zskp1/eye.svg?raw=1';
+	this.eyeImage.src = 'http://svgshare.com/i/3uR.svg';
 
 	this.x = cx;
 	this.y = cy;
 	this.radius = radius;
-	this.eyeImage.onload = function() {
-		ctx.drawImage(this.eyeImage, cx, cy);
-	}
 };
 
 Eye.prototype.calculateQuadrant = function(mouseX, mouseY) {
