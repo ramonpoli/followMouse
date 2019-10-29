@@ -48,10 +48,7 @@ $(document).ready(function() {
 		mouse.y = e.clientY - rect.top;
 		e.preventDefault();
 	};
-	emoji1.src = 'http://svgshare.com/i/3v5.svg';
-	//emoji1.src = '/animations/followMouse/images/emoji1_body.svg';
-	emoji1.width = 200;
-	emoji1.height = 400;
+	emoji1.src= './images/emoji1_body.svg'
 
 	emoji1.onload = function() {
 		ctx.drawImage(emoji1, emoji1Sizes.cx, emoji1Sizes.cy);
@@ -127,7 +124,7 @@ Eyes.prototype.drawGrid = function() {
 
 var Eye = function(cx, cy, radius) {
 	this.eyeImage = new Image();
-	this.eyeImage.src = 'http://svgshare.com/i/3uR.svg';
+	this.eyeImage.src = 'https://drive.google.com/uc?id=0B5ypEBgLbuqQUTNKUzhjZ1hOaUk';
 
 	this.x = cx;
 	this.y = cy;
